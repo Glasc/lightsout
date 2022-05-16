@@ -1,0 +1,44 @@
+.grid {
+  grid-area: grid;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  place-items: center;
+  padding: 1.5em;
+  gap: 1.5em;
+  background-color: var(--color-background-secondary);
+  border-radius: 9px;
+  &Border {
+   composes: grid;
+   border: 3px solid var(--color-secondary);
+  }
+}
+
+.light {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 200ms;
+  &:focus {
+    transition: all 200ms;
+    border: 2px solid var(--color-white);
+  }
+  &Active {
+    composes: light;
+    background-color: var(--color-secondary);
+  }
+  &Disabled {
+    composes: light;
+    background-color: var(--color-background-primary);
+  }
+}
+
+@media (min-width: 700px) {
+  .light {
+    width: 6rem;
+    height: 6rem;
+  }
+}
