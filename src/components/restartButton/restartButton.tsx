@@ -15,8 +15,6 @@ export const RestartButton: React.FC<RestartButtonProps> = () => {
     generateRandomGame()
   }
 
-
-
   if (isGameDone)
     return <RiRestartFill className={styles.btnRestart} onClick={handleClick} />
   return <RiRestartFill className={styles.btnRestartHidden} onClick={handleClick} />

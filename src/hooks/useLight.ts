@@ -5,12 +5,13 @@ export const useLight = (id: number) => {
   const toggleLight = useStore((state) => state.toggleLight)
   const lightsList = useStore((state) => state.lightsList)
   const toggleGameStatus = useStore((state) => state.toggleGameStatus)
+  const gameStatus = useStore((state) => state.gameStatus)
   const [isActive, setIsActive] = useState<boolean>(false)
 
   useEffect(() => {
     const lightStatus = lightsList[id - 1].status
     setIsActive(lightStatus)
-    
+
     // after the user is done clicking the lights, the game is over
     const isGameDone = lightsList.every((light) => light.status)
     if (isGameDone) {
@@ -19,6 +20,7 @@ export const useLight = (id: number) => {
   }, [lightsList, id, toggleGameStatus])
 
   const handleClick = () => {
+    if (gameStatus === "done") return
     const toggleLights = (ids: number[]) =>
       ids.map((currentId: number) => toggleLight(currentId))
 

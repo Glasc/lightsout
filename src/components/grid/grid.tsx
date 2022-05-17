@@ -2,6 +2,8 @@ import useStore from "../../store/store"
 import styles from "./grid.module.scss"
 import { useLight } from "../../hooks/useLight"
 import { useGame } from "../../hooks/useGame"
+import { useEffect } from "react"
+import { clearInterval } from "timers"
 
 type LightProps = {
   id: number
@@ -9,6 +11,7 @@ type LightProps = {
 
 function Light({ id }: LightProps) {
   const { handleClick, isActive } = useLight(id)
+  const { isGameDone } = useGame()
 
   return (
     <button
@@ -21,6 +24,11 @@ function Light({ id }: LightProps) {
 export const Grid = () => {
   const lightsList = useStore((state) => state.lightsList)
   const { isGameDone } = useGame()
+  const generateRandomGame = useStore((state) => state.generateRandomGame)
+
+  useEffect(() => {
+    generateRandomGame()
+  }, [generateRandomGame])
 
   const renderLights = () =>
     lightsList.map((light) => {

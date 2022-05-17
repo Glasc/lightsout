@@ -23,13 +23,13 @@ const useStore = create<LightState>()(
           return { gameStatus: "pending" }
         }),
       lightsList: [
-        { id: 1, status: true },
+        { id: 1, status: false },
         { id: 2, status: false },
         { id: 3, status: false },
         { id: 4, status: false },
-        { id: 5, status: true },
+        { id: 5, status: false },
         { id: 6, status: false },
-        { id: 7, status: true },
+        { id: 7, status: false },
         { id: 8, status: false },
         { id: 9, status: false },
       ],
@@ -42,15 +42,20 @@ const useStore = create<LightState>()(
             return currentLight
           }),
         })),
-      generateRandomGame: () => set((state) => {
-        const pattern = state.lightsList.map((currentLight) => {
-          currentLight.status = Math.random() > 0.5
-          return currentLight
-        })
-        console.log(pattern);
-        
-        return { lightsList: pattern }
-      })
+      generateRandomGame: () =>
+        set((state) => {
+          const pattern = state.lightsList.map((currentLight) => {
+            currentLight.status = Math.random() > 0.5
+            return currentLight
+          })
+          
+          if (pattern.every(light => light.status)) {
+            console.log("Se dio el caso xd");
+            state.generateRandomGame()
+          }
+
+          return { lightsList: pattern }
+        }),
     }))
   )
 )

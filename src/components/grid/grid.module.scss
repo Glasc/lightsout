@@ -22,7 +22,7 @@
   cursor: pointer;
   border: 2px solid transparent;
   transition: all 200ms;
-  &:focus {
+  &:hover {
     transition: all 200ms;
     border: 2px solid var(--color-white);
   }
