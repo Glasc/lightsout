@@ -11,7 +11,6 @@ export const useLight = (id: number) => {
   useEffect(() => {
     const lightStatus = lightsList[id - 1].status
     setIsActive(lightStatus)
-
     // after the user is done clicking the lights, the game is over
     const isGameDone = lightsList.every((light) => light.status)
     if (isGameDone) {
@@ -23,7 +22,7 @@ export const useLight = (id: number) => {
     if (gameStatus === "done") return
     const toggleLights = (ids: number[]) =>
       ids.map((currentId: number) => toggleLight(currentId))
-
+      
     toggleLight(id)
     switch (id) {
       case 1:

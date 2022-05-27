@@ -6,12 +6,13 @@ import { Heading } from "../components/heading/heading"
 import { Grid } from "../components/grid/grid"
 
 const Home: NextPage = () => {
-
   return (
     <div className={styles.container}>
-      <Heading />
-      <Grid />
-      <RestartButton />
+      <div className={styles.game}>
+        <Heading />
+        <Grid />
+        <RestartButton />
+      </div>
     </div>
   )
 }

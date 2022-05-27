@@ -6,11 +6,13 @@ export const useGame = () => {
   const gameStatus = useStore((state) => state.gameStatus)
   const generateRandomGame = useStore((state) => state.generateRandomGame)
   const [isGameDone, setIsGameDone] = useState<boolean>()
-
+  
   useEffect(() => {
     if (gameStatus === "pending") setIsGameDone(false)
     else setIsGameDone(true)
   }, [gameStatus])
+
+  
 
   return { toggleGameStatus, gameStatus, generateRandomGame, isGameDone }
 }

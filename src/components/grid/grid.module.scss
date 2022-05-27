@@ -10,8 +10,8 @@
   border-radius: 9px;
   border: 3px solid transparent;
   &Border {
-   composes: grid;
-   border: 3px solid var(--color-secondary);
+    composes: grid;
+    border: 3px solid var(--color-secondary);
   }
 }
 
@@ -35,10 +35,8 @@
     composes: light;
     background-color: var(--color-background-primary);
   }
-}
 
-@media (min-width: 700px) {
-  .light {
+  @media (min-width: 50rem) {
     width: 6rem;
     height: 6rem;
   }

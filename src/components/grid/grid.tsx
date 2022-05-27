@@ -3,7 +3,6 @@ import styles from "./grid.module.scss"
 import { useLight } from "../../hooks/useLight"
 import { useGame } from "../../hooks/useGame"
 import { useEffect } from "react"
-import { clearInterval } from "timers"
 
 type LightProps = {
   id: number
@@ -11,8 +10,6 @@ type LightProps = {
 
 function Light({ id }: LightProps) {
   const { handleClick, isActive } = useLight(id)
-  const { isGameDone } = useGame()
-
   return (
     <button
       className={isActive ? styles.lightActive : styles.lightDisabled}
@@ -35,6 +32,7 @@ export const Grid = () => {
       return <Light key={light.id} id={light.id} />
     })
 
+  // TODO: needs to toggle a class, not an entire component.
   if (isGameDone)
     return <section className={styles.gridBorder}>{renderLights()}</section>
   return <section className={styles.grid}>{renderLights()}</section>
