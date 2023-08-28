@@ -7,8 +7,10 @@ import ReactMarkdown from "react-markdown"
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
-      <Heading />
-      <Grid />
+      <div>
+        <Heading />
+        <Grid />
+      </div>
     </div>
   )
 }

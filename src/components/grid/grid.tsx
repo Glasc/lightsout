@@ -38,7 +38,7 @@ export const Grid = () => {
     return (
       <section className={styles.gridBorder}>
         {renderLights()}
-        <div className={styles.restartOverlay}>
+        <div className={styles.restart}>
           <RestartButton />
         </div>
       </section>

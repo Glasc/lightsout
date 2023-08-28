@@ -1,6 +1,8 @@
 .btnRestart {
   grid-area: restart;
-  color: var(--color-secondary);
+  color: rgb(58,191,248);
+  background-color: #1e1818;
+  border-radius: 12rem;
   border-radius: 7px;
   font-size: 4rem;
   cursor: pointer;
@@ -8,6 +10,9 @@
   border: none;
   position: relative;
   bottom: 0px;
+  &:hover {
+    color: rgb(53, 173, 224);
+  }
   &Hidden {
     visibility: none;
     color: transparent;
