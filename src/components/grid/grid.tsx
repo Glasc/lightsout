@@ -3,6 +3,7 @@ import styles from "./grid.module.scss"
 import { useLight } from "../../hooks/useLight"
 import { useGame } from "../../hooks/useGame"
 import { useEffect } from "react"
+import { RestartButton } from "../restartButton/restartButton"
 
 type LightProps = {
   id: number
@@ -34,6 +35,13 @@ export const Grid = () => {
 
   // TODO: needs to toggle a class, not an entire component.
   if (isGameDone)
-    return <section className={styles.gridBorder}>{renderLights()}</section>
+    return (
+      <section className={styles.gridBorder}>
+        {renderLights()}
+        <div className={styles.restartOverlay}>
+          <RestartButton />
+        </div>
+      </section>
+    )
   return <section className={styles.grid}>{renderLights()}</section>
 }

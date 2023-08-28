@@ -1,25 +1,16 @@
 .btnRestart {
   grid-area: restart;
-  background-color: var(--color-primary);
-  color: var(--color-white);
+  color: var(--color-secondary);
   border-radius: 7px;
-  font-size: 3rem;
+  font-size: 4rem;
   cursor: pointer;
   transition: all 250ms;
   border: none;
   position: relative;
   bottom: 0px;
-  &:hover {
-    transition: all 250ms;
-    bottom: 7px;
-  }
-  &:focus {
-    transition: all 250ms;
-    background-color: var(--color-secondary);
-  }
   &Hidden {
     visibility: none;
     color: transparent;
-    font-size: 3rem;
+    font-size: 4rem;
   }
 }

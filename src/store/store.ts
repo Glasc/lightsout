@@ -50,7 +50,6 @@ const useStore = create<LightState>()(
           })
           
           if (pattern.every(light => light.status)) {
-            console.log("Se dio el caso xd");
             state.generateRandomGame()
           }
 

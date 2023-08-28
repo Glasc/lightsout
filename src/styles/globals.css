@@ -1,19 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Hanken+Grotesk:regular,500,600,700,800,900);
 
 :root {
-  --color-primary: #DB1D70;
-  --color-secondary: #E24A8D;
-  --color-white: #EBE8E9;
-  --color-background-primary: #18181B;
-  --color-background-secondary: #242428;
+  --color-primary: #acb2c9;
+  --color-secondary: #36D399;
+  --color-white: #d2e6d6;
+  --color-background-primary: #F87272;
+  --color-background-secondary: #171212;
 }
 
 html,
 body {
-  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Hanken Grotesk", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   height: 100%;
   width: 100%;
-  
 }
 
 a {
@@ -33,7 +32,7 @@ h3,
 input,
 button {
   margin: 0;
-  font-family: "Inter";
+  font-family: "Hanken Grotesk";
 }
 
 .text-white {

@@ -1,11 +1,15 @@
 .heading {
   grid-area: heading;
   text-align: center;
-  color: var(--color-white);
-  font-size: 3rem;
-  width: 8ch;
+  color: #cac9c9;
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1.2;
   span {
     display: block;
-    color: var(--color-primary);
+    font-size: 72px;
+    background: -webkit-linear-gradient(#35d097, #15563e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
