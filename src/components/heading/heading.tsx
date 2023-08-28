@@ -7,14 +7,14 @@ export const Heading = () => {
   if (isGameDone) {
     return (
       <h1 className={styles.heading}>
-        You solved the <span>Lights Out!</span>
+        Solved
       </h1>
     )
   }
 
   return (
     <h1 className={styles.heading}>
-      Solve the following <span>Lights Out!</span>
+      Lights Out
     </h1>
   )
 }

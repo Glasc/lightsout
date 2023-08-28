@@ -11,7 +11,6 @@ const Home: NextPage = () => {
       <div className={styles.game}>
         <Heading />
         <Grid />
-        <RestartButton />
       </div>
     </div>
   )

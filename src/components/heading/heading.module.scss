@@ -1,11 +1,11 @@
 .heading {
   grid-area: heading;
   text-align: center;
-  color: var(--color-white);
+  color: black;
+  font-weight: 700;
   font-size: 3rem;
-  width: 8ch;
-  span {
-    display: block;
-    color: var(--color-primary);
+
+  @media (min-width: 30rem) {
+    font-size: 4rem;
   }
 }
