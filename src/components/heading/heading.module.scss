@@ -1,23 +1,11 @@
 .heading {
   grid-area: heading;
   text-align: center;
-  color: #cac9c9;
-  font-size: 4rem;
-  font-weight: 900;
-  line-height: 1.2;
-  .accent {
-    display: block;
-    font-size: 72px;
-    background: -webkit-linear-gradient(left, white, #8bd89b, #F87272);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  .accentSolved {
-    display: block;
-    font-size: 72px;
-    background: -webkit-linear-gradient(left, hsl(164.23,72.9%,41.96%), rgb(58,191,248));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
+  color: black;
+  font-weight: 700;
+  font-size: 3rem;
+
+  @media (min-width: 30rem) {
+    font-size: 4rem;
   }
 }
