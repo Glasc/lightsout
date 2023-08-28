@@ -21,7 +21,7 @@ function Light({ id }: LightProps) {
 
 export const Grid = () => {
   const lightsList = useStore((state) => state.lightsList)
-  const { isGameDone } = useGame()
+  const { isGameDone, toggleGameStatus } = useGame()
   const generateRandomGame = useStore((state) => state.generateRandomGame)
   useEffect(() => {
     generateRandomGame()
@@ -31,6 +31,10 @@ export const Grid = () => {
     lightsList.map((light) => {
       return <Light key={light.id} id={light.id} />
     })
+
+  useEffect(() => {
+    toggleGameStatus("pending")
+  }, [toggleGameStatus])
 
   // TODO: needs to toggle a class, not an entire component.
   if (isGameDone)
