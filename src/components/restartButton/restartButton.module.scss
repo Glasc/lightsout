@@ -1,18 +1,15 @@
-
-
 .btnRestart {
   grid-area: restart;
   background-color: #4d8249;
   color: var(--color-secondary);
   border-radius: 7px;
-  font-size: 4rem;
+  font-size: 3.5rem;
   cursor: pointer;
+  transition: all 200ms;
   border: 2px solid transparent;
-  transition: all 100ms;
-  box-sizing: border-box;
   &:hover {
-    transition: all 250ms;
-    bottom: 7px;
+    border: 2px solid #000;
+    box-shadow: 2px 2px 0px 0px #000;
   }
   &:focus {
     transition: all 250ms;

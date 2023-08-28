@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react"
+import { useState, useEffect } from "react"
 import useStore from "../store/store"
 
 export const useLight = (id: number) => {
@@ -14,7 +14,7 @@ export const useLight = (id: number) => {
     // after the user is done clicking the lights, the game is over
     const isGameDone = lightsList.every((light) => light.status)
     if (isGameDone) {
-      toggleGameStatus()
+      toggleGameStatus("done")
     }
   }, [lightsList, id, toggleGameStatus])
 

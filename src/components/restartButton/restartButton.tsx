@@ -8,7 +8,7 @@ export const RestartButton: React.FC<RestartButtonProps> = () => {
   const { toggleGameStatus, generateRandomGame, isGameDone } = useGame()
 
   const handleClick = () => {
-    toggleGameStatus()
+    toggleGameStatus("pending")
     generateRandomGame()
   }
 

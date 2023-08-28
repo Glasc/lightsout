@@ -23,7 +23,6 @@ export const Grid = () => {
   const lightsList = useStore((state) => state.lightsList)
   const { isGameDone } = useGame()
   const generateRandomGame = useStore((state) => state.generateRandomGame)
-
   useEffect(() => {
     generateRandomGame()
   }, [generateRandomGame])

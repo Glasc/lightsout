@@ -5,7 +5,7 @@ interface LightState {
   // increase: (by: number) => void
   lightsList: { id: number; status: boolean }[]
   toggleLight: (id: number) => void
-  toggleGameStatus: () => void
+  toggleGameStatus: (status: "pending" | "done") => void
   generateRandomGame: () => void
   gameStatus: "pending" | "done"
 }
@@ -15,12 +15,9 @@ const useStore = create<LightState>()(
     persist((set) => ({
       // increase: (by) => set((state) => ({ bears: state.bears + by })),
       gameStatus: "pending",
-      toggleGameStatus: () =>
-        set((state) => {
-          if (state.gameStatus === "pending") {
-            return { gameStatus: "done" }
-          }
-          return { gameStatus: "pending" }
+      toggleGameStatus: (status) =>
+        set(() => {
+          return { gameStatus: status }
         }),
       lightsList: [
         { id: 1, status: false },
@@ -48,8 +45,8 @@ const useStore = create<LightState>()(
             currentLight.status = Math.random() > 0.5
             return currentLight
           })
-          
-          if (pattern.every(light => light.status)) {
+
+          if (pattern.every((light) => light.status)) {
             state.generateRandomGame()
           }
 
