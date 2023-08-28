@@ -13,13 +13,14 @@
   padding: 1.5em;
   gap: 1.5em;
   background-color: #1e1818;
+  border: 3px solid transparent;
   border-radius: 6px;
   &:hover {
-    border: 2px solid transparent;
+    border: 3px solid transparent;
   }
   &Border {
     composes: grid;
-    border: 2px solid #76d1b0;
+    border: 3px solid #49816c;
   }
 }
 

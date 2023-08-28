@@ -5,11 +5,19 @@
   font-size: 4rem;
   font-weight: 900;
   line-height: 1.2;
-  span {
+  .accent {
     display: block;
     font-size: 72px;
-    background: -webkit-linear-gradient(#35d097, #15563e);
+    background: -webkit-linear-gradient(left, white, #8bd89b, #F87272);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  
+  .accentSolved {
+    display: block;
+    font-size: 72px;
+    background: -webkit-linear-gradient(left, hsl(164.23,72.9%,41.96%), hsl(175,72.9%,41.96%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
   }
 }
